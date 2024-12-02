@@ -11,11 +11,11 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:[true,"Password is Required"]
     },
-    firstname:{
+    firstName:{
         type:String,
         required:false 
     },
-    lastname:{
+    lastName:{
         type:String,
         required:false
     },
@@ -39,5 +39,5 @@ userSchema.pre("save",async function(next){
     next()
 })
 
-const User = mongoose.model("User",userSchema)
+const User = mongoose.model("Users",userSchema)
 export default User
